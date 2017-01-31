@@ -1,0 +1,19 @@
+env:
+  es6: true
+parserOptions:
+  sourceType: module
+  ecmaVersion: 2017
+globals:
+  describe: true
+  it: true
+  beforeEach: true
+  afterEach: true
+  after: true
+  before: true
+  print: true
+rules:
+  one-var: [0, never]
+  no-new-wrappers: 0
+  no-useless-escape: 0
+extends:
+- happiness

@@ -1,0 +1,104 @@
+{
+  "name": "cmd-line",
+  "version": "0.0.0-development",
+  "description": "Allows you to create command line tools fast and easy.",
+  "main": "lib/index.js",
+  "scripts": {
+    "eslint": "eslint src --ignore-path .gitignore",
+    "test": "mocha test/integration.js --compilers js:babel-register",
+    "export": "koaton-exporter src/*.js src/**/*.js lib -r src/",
+    "cover": "nyc npm t",
+    "commit": "git add -A & git-cz",
+    "export:live": "npm run export & chokidar src -c \"cls && npm run export\"",
+    "test:live": "npm t -- -w",
+    "cover:live": "npm run cover & chokidar src test -c \"cls & npm run cover\"",
+    "codeclimate:report": "codeclimate-test-reporter < coverage/lcov.info",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gerard2p/cmd-line.git"
+  },
+  "keywords": [
+    "Command",
+    "Line",
+    "Tool",
+    "CMD"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "Gerardo Pérez Pérez <gerard2perez@outlook.com>",
+  "license": "MPL-2",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/gerard2p/cmd-line/issues"
+  },
+  "homepage": "https://github.com/gerard2p/cmd-line#readme",
+  "files": [
+    "lib/**/*.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "babel-plugin-istanbul": "^3.0.0",
+    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.12.2",
+    "eslint-config-happiness": "^5.3.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "koaton-exporter": "^1.2.1",
+    "mocha": "^3.1.0",
+    "npm-run-all": "^4.0.0",
+    "nyc": "^10.0.0",
+    "semantic-release": "^6.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "nyc": {
+    "lines": 99,
+    "statements": 99,
+    "functions": 99,
+    "branches": 99,
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "include": [
+      "src/**"
+    ],
+    "exclude": [],
+    "sourceMap": false,
+    "instrument": false,
+    "cache": true,
+    "check-coverage": false,
+    "all": false,
+    "report-dir": "./coverage"
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-transform-koaton-es6-modules",
+      "babel-plugin-transform-koa2-async-to-generator",
+      "istanbul"
+    ],
+    "ignore": [
+      "serverconf",
+      "config/",
+      "docs/",
+      "lib/",
+      "node_modules/",
+      "templates/",
+      "testcoverage/",
+      "testingapp/"
+    ]
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "colors": "^1.1.2",
+    "inflected": "^1.1.7"
+  }
+}
