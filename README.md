@@ -1,6 +1,6 @@
  # CMDLine
 
- [![NPM Version](http://img.shields.io/npm/v/cmd-line.svg?style=flat-square)](https://www.npmjs.org/package/koaton)[![Build Status](https://img.shields.io/travis/gerard2p/cmd-line/master.svg?style=flat-square)](https://travis-ci.org/gerard2p/cmd-line)![PRs Welcome](https://img.shields.io/badge/PRs%20🔀-Welcome-brightgreen.svg?style=flat-square)
+ [![NPM Version](http://img.shields.io/npm/v/cmd-line.svg?style=flat-square)](https://www.npmjs.org/package/cmd-line)[![Build Status](https://img.shields.io/travis/gerard2p/cmd-line/master.svg?style=flat-square)](https://travis-ci.org/gerard2p/cmd-line)![PRs Welcome](https://img.shields.io/badge/PRs%20🔀-Welcome-brightgreen.svg?style=flat-square)
 
  [![bitHound Overall Score](https://www.bithound.io/github/gerard2p/cmd-line/badges/score.svg?style=flat-square)](https://www.bithound.io/github/gerard2p/cmd-line)[![bitHound Dependencies](https://www.bithound.io/github/gerard2p/cmd-line/badges/dependencies.svg?style=flat-square)](https://www.bithound.io/github/gerard2p/cmd-line/master/dependencies/npm)[![bitHound Dev Dependencies](https://www.bithound.io/github/gerard2p/cmd-line/badges/devDependencies.svg?style=flat-square)](https://www.bithound.io/github/gerard2p/cmd-line/master/dependencies/npm)
 

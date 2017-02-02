@@ -1,7 +1,7 @@
 import 'colors';
 import * as configuration from './configuration';
 import * as co from 'co';
-import * as inflect from 'inflected';
+import * as inflect from 'inflection';
 
 class Option {
 	constructor (option) {
@@ -113,7 +113,8 @@ class Command {
 		let opts = params.slice();
 		let options = {};
 		for (const option of this.options) {
-			let camelizedOption = inflect.camelize(inflect.underscore((option.tag || option.shortag).replace(/^\-+/g, '').trim()), false);
+			let camelizedOption = inflect.titleize(option.tag || option.shortag).replace(/^\-+/g, '').replace(/\-/g, ' ').replace(/ /g, '');
+			camelizedOption = inflect.camelize(camelizedOption, true);
 			let OPTS = opts.slice();
 			let arg = OPTS.shift();
 			options[camelizedOption] = false;

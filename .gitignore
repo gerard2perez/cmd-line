@@ -6,3 +6,5 @@
 /coverage/
 /lib/
 *.tgz
+*.log.*
+*.log
