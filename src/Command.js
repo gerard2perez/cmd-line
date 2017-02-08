@@ -132,7 +132,7 @@ class Command {
 					} else {
 						options[camelizedOption] = true;
 					}
-				} else if (option.shortag.length === 2) {
+				} else if (option.shortag.length === 2 && arg.indexOf('-') === 0) {
 					let st = option.shortag.replace('-', '');
 					let len = arg.indexOf(st);
 					if (len > 0) {
