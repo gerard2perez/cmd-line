@@ -135,7 +135,7 @@ class Command {
 				} else if (option.shortag.length === 2 && arg.indexOf('-') === 0) {
 					let st = option.shortag.replace('-', '');
 					let len = arg.indexOf(st);
-					if (len > 0) {
+					if (arg.indexOf('--') === -1 && len > 0) {
 						options[camelizedOption] = true;
 						opts[index] = opts[index].replace(st, '');
 					}
