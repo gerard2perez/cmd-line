@@ -5,7 +5,6 @@ import {
 import * as path from 'path';
 import Command from './Command';
 import * as configuration from './configuration';
-import * as co from 'co';
 
 const filterFolders = function (folder) {
 	return readdirSync(folder).filter(f => f.indexOf('.js')).map(f => f.replace('.js', ''));
@@ -60,7 +59,7 @@ export default class cmd {
 	}
 	execute (commandlineargs) {
 		commandlineargs.splice(0, 2);
-		return co(function * () {
+		return new Promise(function (resolve, reject) {
 			let [cmd, ...args] = commandlineargs;
 			if (!cmd) {
 				for (const cmd of Object.keys(commandOrgin)) {
@@ -68,12 +67,12 @@ export default class cmd {
 					print(CMD.Info);
 					print('\n');
 				}
-				return 0;
+				resolve(0);
 			} else if (commandOrgin[cmd]) {
 				const CMD = getCommand(path.join(commandOrgin[cmd], cmd));
-				return Command.execute.call(CMD, args);
+				resolve(Command.execute.call(CMD, args));
 			} else {
-				throw new Error(`${cmd} is not a command`);
+				reject(`${cmd} is not a command`);
 			}
 		});
 	}
