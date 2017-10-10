@@ -1,6 +1,7 @@
- # CMDLine
+# CMDLine
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/gerard2p/cmd-line.svg)](https://greenkeeper.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgerard2p%2Fcmd-line.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgerard2p%2Fcmd-line?ref=badge_shield)
 
  [![NPM Version](http://img.shields.io/npm/v/cmd-line.svg?style=flat-square)](https://www.npmjs.org/package/cmd-line)[![Build Status](https://img.shields.io/travis/gerard2p/cmd-line/master.svg?style=flat-square)](https://travis-ci.org/gerard2p/cmd-line)![PRs Welcome](https://img.shields.io/badge/PRs%20🔀-Welcome-brightgreen.svg?style=flat-square)
 
@@ -135,3 +136,7 @@ mycommad subcmd2 -h
 Outputs:
 My Custom Help
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgerard2p%2Fcmd-line.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgerard2p%2Fcmd-line?ref=badge_large)
