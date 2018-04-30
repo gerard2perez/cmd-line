@@ -98,7 +98,7 @@
   },
   "dependencies": {
     "co": "^4.6.0",
-    "colors": "^1.1.2",
+    "colors": "^1.2.2",
     "inflection": "^1.12.0"
   }
 }
