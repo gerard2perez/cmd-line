@@ -42,7 +42,7 @@
   ],
   "devDependencies": {
     "babel-plugin-istanbul": "^4.1.5",
-    "commitizen": "^2.8.6",
+    "commitizen": "^4.0.2",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^4.8.0",
     "eslint-config-happiness": "^10.2.1",
