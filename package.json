@@ -41,7 +41,7 @@
     "LICENSE"
   ],
   "devDependencies": {
-    "babel-plugin-istanbul": "^5.1.1",
+    "babel-plugin-istanbul": "^6.0.0",
     "commitizen": "^3.0.0",
     "cz-conventional-changelog": "^3.0.0",
     "eslint": "^4.8.0",
